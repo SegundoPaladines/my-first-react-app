@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import ColocarTexto from './ColocarTexto';
 
 function App() {
+  
+  const [value, setValue] = useState(['https://media4.giphy.com/media/EPcvhM28ER9XW/giphy.gif?cid=ecf05e47m1gsjzex1wx1lrubi9ueuzpmqkg9lphng2h1bvto&ep=v1_gifs_search&rid=giphy.gif&ct=g']);
+  
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <section className="App-content">
+        <img src = {value} />
+        <hr width ="90%" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <ColocarTexto/>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </section>
     </div>
   );
 }
